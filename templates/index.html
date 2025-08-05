@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Estate Price Prediction</title>
+</head>
+<body>
+    <h2>Enter Property Details</h2>
+    <form action="/predict" method="post">
+        {% for feature in features %}
+            <label>{{ feature }}:</label><br>
+            <input type="text" name="{{ feature }}" required><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict Price">
+    </form>
+</body>
+</html>
